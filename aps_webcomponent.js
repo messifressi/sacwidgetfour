@@ -27,17 +27,17 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							widgetText: this.widgetText
+							tileHeaderText: this.tileHeaderText
 						}
 					}
 			}));
 		}
 
-		set widgetText(newText) {
+		set tileHeaderText(newText) {
 			this._shadowRoot.getElementById("aps_text").value = newText;
 		}
 
-		get widgetText() {
+		get tileHeaderText() {
 			return this._shadowRoot.getElementById("aps_text").value;
 		}
 	}
