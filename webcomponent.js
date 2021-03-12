@@ -155,7 +155,7 @@
 			this._tagContainer;
 			this._tagType = "h1";
 			this._tileHeaderText = "Hello World";
-			this._paxKumvalElem = this._shadowRoot.querySelector('#paxKumVal');
+			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
 			this._paxKumVal = '0000';
 			this._ksOpen = 'status';
