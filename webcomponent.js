@@ -163,6 +163,7 @@
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
 				this.dispatchEvent(event);});
+			this._props = {};
 		}
 
         //Fired when the widget is added to the html DOM of the page
@@ -177,12 +178,12 @@
         }
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
-		onCustomWidgetBeforeUpdate(oChangedProperties) {
+		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
-		onCustomWidgetAfterUpdate(oChangedProperties) {
+		onCustomWidgetAfterUpdate(changedProperties) {
            		 if ("ksOpen" in changedProperties) {
 				this._ksOpen = changedProperties["ksOpen"];
 			}
