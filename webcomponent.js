@@ -155,8 +155,14 @@
 			this._tagContainer;
 			this._tagType = "h1";
 			this._tileHeaderText = "Hello World";
-			this._paxkumval = this._shadowRoot.querySelector('#paxKumVal');
-			this._ksopen = this._shadowRoot.querySelector('#ksOpen');
+			this._paxKumvalElem = this._shadowRoot.querySelector('#paxKumVal');
+			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
+			this._paxKumVal = '0000';
+			this._ksOpen = 'status';
+			
+			this.addEventListener("click", event => {
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
 		}
 
         //Fired when the widget is added to the html DOM of the page
@@ -172,14 +178,20 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-
+			this._props = { ...this._props, ...changedProperties };
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this._firstConnection){
-                this.redraw();
-            }
+           		 if ("ksOpen" in changedProperties) {
+				this._ksOpen = changedProperties["ksOpen"];
+			}
+			
+			if ("paxKumVal" in changedProperties) {
+				this._paxKumVal = changedProperties["paxKumVal"];
+			}
+			
+			this.render();
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -212,6 +224,23 @@
 		
 		setTileValues(newValue1, newValue2){
 		}
+	    
+	    	get paxKumVal(){
+			return this._paxKumVal;
+		}
+	    
+	    	set paxKumVal(value){
+			this._paxKumVal = value;
+		}
+	    
+	        get ksOpen(){
+			return this._ksOpen;
+		}
+	    
+	    	set ksOpen(value){
+			
+			this._ksOpen = value;
+		}
 		
 		get tileHeaderText(){
 			return this._tileHeaderText;
@@ -230,17 +259,22 @@
 		}
 
         redraw(){
-		if (this._tagContainer){
+		/**if (this._tagContainer){
                 	this._tagContainer.parentNode.removeChild(this._tagContainer);
             	}
 		var shadow = window.getSelection(this._shadowRoot);
 		this._tagContainer = document.createElement(this._tagType);
 		var theText = document.createTextNode(this._tileHeaderText);    
 		this._tagContainer.appendChild(theText); 
-		this._shadowRoot.appendChild(this._tagContainer);
+		this._shadowRoot.appendChild(this._tagContainer); **/
 		
-		this._ksopen.innerHTML = 'open';
+		//this._ksopen.innerHTML = 'open';
 			
         }
+			
+	render(){
+		this._ksOpenElem.innerHTML = 'open';
+		this._paxKumValElem.innerHTML = this._paxKumVal;
+	}
     });
 })();
