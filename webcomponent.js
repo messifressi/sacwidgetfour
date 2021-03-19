@@ -279,7 +279,7 @@
 	render(){
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
-		this._ksTextElem.innerHTML = this._ksText;
+		this._tileHeaderElem.innerHTML = this._ksText;
 	}
     });
 })();
