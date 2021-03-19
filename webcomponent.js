@@ -271,6 +271,7 @@
 		this._tagContainer.appendChild(theText); 
 		this._shadowRoot.appendChild(this._tagContainer);**/
 		this._tileHeaderElem.innerHTML = this._ksText;
+		console.log("redraw()");
 		
 		//this._ksopen.innerHTML = 'open';
 			
@@ -280,6 +281,7 @@
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
 		this._tileHeaderElem.innerHTML = this._ksText;
+		console.log("render()");
 	}
     });
 })();
