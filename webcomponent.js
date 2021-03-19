@@ -68,7 +68,7 @@
          id="ksText"
          x="19.693363"
          y="32.87323"
-         style="stroke-width:1">`+ this._tileHeaderText +`</tspan></text>
+         style="stroke-width:1">Kontrollspur X</tspan></text>
     <text
        transform="scale(1.0149042,0.98531463)"
        xml:space="preserve"
@@ -192,6 +192,7 @@
 			 if ("tileHeaderText" in changedProperties) {
 				this._tileHeaderText = changedProperties["tileHeaderText"];
 				 console.log(this._tileHeaderText);
+				 
 			}
            		 if ("ksOpen" in changedProperties) {
 				this._ksOpen = changedProperties["ksOpen"];
@@ -287,7 +288,6 @@
 	render(){
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
-		this._tileHeaderElem.innerHTML = this._ksText;
 		console.log("render()");
 	}
     });
