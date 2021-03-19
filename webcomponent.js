@@ -172,6 +172,7 @@
         connectedCallback(){
             this._firstConnection = true;
             this.redraw();
+		console.log("connectedCallback");
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -186,6 +187,7 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(changedProperties) {
+			console.log("onCustomWidgetAfterUpdate");
            		 if ("ksOpen" in changedProperties) {
 				this._ksOpen = changedProperties["ksOpen"];
 			}
