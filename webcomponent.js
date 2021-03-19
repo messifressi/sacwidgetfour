@@ -68,7 +68,7 @@
          id="ksText"
          x="19.693363"
          y="32.87323"
-         style="stroke-width:1">Kontrollspur N</tspan></text>
+         style="stroke-width:1">`+ this._tileHeaderText +`</tspan></text>
     <text
        transform="scale(1.0149042,0.98531463)"
        xml:space="preserve"
