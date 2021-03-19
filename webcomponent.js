@@ -154,7 +154,7 @@
 			this._firstConnection = false;
 			this._tagContainer;
 			this._tagType = "h1";
-			this._tileHeaderText = "Kontrollspur X";
+			this._tileHeaderText = "Kontrollspur N";
 			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
 			this._tileHeaderElem = this._shadowRoot.querySelector('#ksText');
@@ -192,6 +192,7 @@
 			 if ("tileHeaderText" in changedProperties) {
 				this._tileHeaderText = changedProperties["tileHeaderText"];
 				 console.log(this._tileHeaderText);
+				 this._tileHeaderElem.innerHTML = this._tileHeaderText;
 				 
 			}
            		 if ("ksOpen" in changedProperties) {
