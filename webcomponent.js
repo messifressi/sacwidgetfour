@@ -188,6 +188,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(changedProperties) {
 			console.log("onCustomWidgetAfterUpdate");
+			console.log(changedProperties);
 			 if ("tileHeaderText" in changedProperties) {
 				this._tileHeaderText = changedProperties["tileHeaderText"];
 				 console.log(this._tileHeaderText);
