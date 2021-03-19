@@ -157,6 +157,7 @@
 			this._tileHeaderText = "Hello World";
 			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
+			this._ksTextElem = this._shadowRoot.querySelector('#ksText');
 			this._paxKumVal = '0000';
 			this._ksOpen = 'status';
 			
@@ -276,6 +277,7 @@
 	render(){
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
+		this._ksTextElem.innerHTML = this._ksText;
 	}
     });
 })();
