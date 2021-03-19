@@ -276,7 +276,7 @@
 		var theText = document.createTextNode(this._tileHeaderText);    
 		this._tagContainer.appendChild(theText); 
 		this._shadowRoot.appendChild(this._tagContainer);**/
-		this._tileHeaderElem.innerHTML = this._ksText;
+		this._tileHeaderText = this._ksText;
 		console.log("redraw()");
 		
 		//this._ksopen.innerHTML = 'open';
