@@ -158,6 +158,7 @@
 			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
 			this._tileHeaderElem = this._shadowRoot.querySelector('#ksText');
+			this._tileHeaderElem.innerHTML = this._tileHeaderText;
 			this._paxKumVal = '0000';
 			this._ksOpen = 'status';
 			
