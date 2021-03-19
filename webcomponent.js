@@ -274,7 +274,7 @@
         }
 			
 	render(){
-		this._ksOpenElem.innerHTML = 'open';
+		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
 	}
     });
