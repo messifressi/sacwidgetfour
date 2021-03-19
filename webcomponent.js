@@ -154,10 +154,10 @@
 			this._firstConnection = false;
 			this._tagContainer;
 			this._tagType = "h1";
-			this._tileHeaderText = "Hello World";
+			this._tileHeaderText = "Kontrollspur X";
 			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
-			this._ksTextElem = this._shadowRoot.querySelector('#ksText');
+			this._tileHeaderElem = this._shadowRoot.querySelector('#ksText');
 			this._paxKumVal = '0000';
 			this._ksOpen = 'status';
 			
@@ -268,7 +268,8 @@
 		this._tagContainer = document.createElement(this._tagType);
 		var theText = document.createTextNode(this._tileHeaderText);    
 		this._tagContainer.appendChild(theText); 
-		this._shadowRoot.appendChild(this._tagContainer); **/
+		this._shadowRoot.appendChild(this._tagContainer);**/
+		this._tileHeaderElem.innerHTML = this._ksText;
 		
 		//this._ksopen.innerHTML = 'open';
 			
