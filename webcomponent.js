@@ -158,6 +158,7 @@
 			this._paxKumValElem = this._shadowRoot.querySelector('#paxKumVal');
 			this._ksOpenElem = this._shadowRoot.querySelector('#ksOpen');
 			this._tileHeaderElem = this._shadowRoot.querySelector('#ksText');
+			this._barElem = this._shadowRoot.querySelector('#rect1332');
 			this._tileHeaderElem.innerHTML = this._tileHeaderText;
 			this._paxKumVal = '0000';
 			this._ksOpen = 'status';
@@ -221,8 +222,8 @@
         */
 		getBarValue(value){
 			maxVal = 7800;
-			percentage = value/maxVal;
-			return abs(percentage*1.2);
+			percentage = value/maxVal*100;
+			return round(percentage*1.2);
 		}
 		
 		getStatusColor(value){
@@ -289,6 +290,7 @@
 	render(){
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
+		this._barElem.setAttribute("width", getBarValue(this._paxKumVal));
 		console.log("render()");
 	}
     });
