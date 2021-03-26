@@ -290,7 +290,7 @@
 	render(){
 		this._ksOpenElem.innerHTML = this._ksOpen;
 		this._paxKumValElem.innerHTML = this._paxKumVal;
-		this._barElem.setAttribute("width", getBarValue(this._paxKumVal));
+		this._barElem.setAttribute("width", this.getBarValue(this._paxKumVal));
 		console.log("render()");
 	}
     });
