@@ -223,7 +223,7 @@
 		getBarValue(value){
 			var maxVal = 7800;
 			var percentage = value/maxVal*100;
-			return round(percentage*1.2);
+			return Math.round(percentage*1.2);
 		}
 		
 		getStatusColor(value){
