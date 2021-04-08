@@ -1,0 +1,93 @@
+{
+	"name": "Tile",
+	"description": "Show the state of an object",
+	"eula": "",
+	"vendor": "",
+	"license": "",
+	"id": "com.sap.sample.tile",
+	"newInstancePrefix": "Tile",
+	"version": "0.0.1",
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVDhP7cuxDcAgEMDAH4QqYhymzAZsRUPDAtBZkfUNfaQr7ZilpuIdOXVwB3VwB3VwB3VwB3VwB3VwB3Vwh6e31F6R+ocvdbgcVhzof3HQqnQ9AQAAAABJRU5ErkJggg==",
+	"webcomponents": [
+        {
+			"kind": "main",
+			"tag": "com-sap-sample-tile",
+            "url": "https://messifressi.github.io/sacwidgetfour/webcomponent.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        },
+		{
+			"kind": "styling",
+			"tag": "com-sap-sample-tile-aps",
+            "url": "https://messifressi.github.io/sacwidgetfour/aps_webcomponent.js",
+			"integrity": "",
+            "ignoreIntegrity" : true
+		}
+    ],
+	"properties": {
+		"tileHeaderText": {
+			"type": "string",
+			"description": "The text of the header",
+			"default": "Header"
+		},
+		"ksOpen": {
+			"type": "string",
+			"description": "Status der Kontrollstelle",
+			"default": "Kontrollstelle N"
+		},
+		"paxKumVal": {
+			"type": "string",
+			"description": "Anzahl PAX",
+			"default": "0000"
+		}
+	},
+	"methods": {
+		"setTileValues": {
+			"description": "Update state of tile",
+			"parameters": [
+				{
+					"name": "newSumValue",
+					"type": "number",
+					"description": "The values for the object"
+				},
+				{
+					"name": "newStateValue",
+					"type": "number",
+					"description": "The state of the object"
+				}
+			]
+		},
+		"setKsOpen": {
+			"description": "Update state of tile",
+			"parameters": [
+				{
+					"name": "ksOpenVal",
+					"type": "string",
+					"description": "The state of the object"
+				}
+			],
+			"body": "this.ksOpen = ksOpenVal;"
+		},
+		"getKsOpen": {
+			"description": "Retrieve state of tile",
+			"body": "return this.ksOpen;",
+			"returnType": "string"
+		},
+		"setPaxKumVal": {
+			"description": "Update state of tile",
+			"parameters": [
+				{
+					"name": "paxKumVal",
+					"type": "string",
+					"description": "The value of the object"
+				}
+			],
+			"body": "this.paxKumVal = paxKumVal;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when Tile is clicked on"
+		}
+	}
+}
